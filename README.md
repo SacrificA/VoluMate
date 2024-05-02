@@ -1,2 +1,1 @@
-# VoluMate
-# VoluMate
+# VoluMate. Mobile application for volunteering
