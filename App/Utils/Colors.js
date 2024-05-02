@@ -1,0 +1,9 @@
+export default {
+  BLACK: "#000000",
+  PRIMARY: "#139CE6",
+  WHITE: "#FFFFFF",
+  UNDERPRIMARY: "#B2E4FF",
+  TABBAR: "#6ACBFF",
+  LIGHT_GRAY: "#EDEDED",
+  GRAY: "#808080",
+};
