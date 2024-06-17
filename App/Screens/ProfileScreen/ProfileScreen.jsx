@@ -5,6 +5,7 @@ import {
   FlatList,
   TouchableOpacity,
   Linking,
+  StyleSheet,
 } from "react-native";
 import React from "react";
 import { useUser, useSession } from "@clerk/clerk-expo";
@@ -55,38 +56,11 @@ export default function ProfileScreen() {
 
   return (
     <View>
-      <View
-        style={{
-          padding: 20,
-          paddingTop: 20,
-          backgroundColor: Colors.PRIMARY,
-        }}
-      >
-        <Text style={{ fontSize: 23, fontFamily: "Montserrat-Bold" }}>
-          Профіль
-        </Text>
-        <View
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            padding: 20,
-          }}
-        >
-          <Image
-            source={{ uri: user.imageUrl }}
-            style={{ width: 90, height: 90, borderRadius: 99 }}
-          />
-          <Text
-            style={{
-              fontSize: 20,
-              marginTop: 8,
-              fontFamily: "Montserrat-Medium",
-              color: Colors.WHITE,
-            }}
-          >
-            {user.fullName}
-          </Text>
+      <View style={styles.mainContainer}>
+        <Text style={styles.profileNameText}>Профіль</Text>
+        <View style={styles.container}>
+          <Image source={{ uri: user.imageUrl }} style={styles.imageStyling} />
+          <Text style={styles.profileFullnameText}>{user.fullName}</Text>
         </View>
       </View>
       <View style={{ paddingTop: 40 }}>
@@ -130,3 +104,32 @@ export default function ProfileScreen() {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  mainContainer: {
+    padding: 20,
+    paddingTop: 20,
+    backgroundColor: Colors.PRIMARY,
+  },
+  profileNameText: {
+    fontSize: 23,
+    fontFamily: "Montserrat-Bold",
+  },
+  container: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 20,
+  },
+  imageStyling: {
+    width: 90,
+    height: 90,
+    borderRadius: 99,
+  },
+  profileFullnameText: {
+    fontSize: 20,
+    marginTop: 8,
+    fontFamily: "Montserrat-Medium",
+    color: Colors.WHITE,
+  },
+});

@@ -26,20 +26,8 @@ export default function Header() {
           >
             <Image source={{ uri: user?.imageUrl }} style={styles.userImage} />
             <View>
-              <Text
-                style={{ color: Colors.WHITE, fontFamily: "Montserrat-Medium" }}
-              >
-                Вітання
-              </Text>
-              <Text
-                style={{
-                  color: Colors.WHITE,
-                  fontSize: 15,
-                  fontFamily: "Montserrat-Medium",
-                }}
-              >
-                {user?.fullName}
-              </Text>
+              <Text style={styles.greetingsText}>Вітання</Text>
+              <Text style={styles.userFullnameText}>{user?.fullName}</Text>
             </View>
           </TouchableOpacity>
           <TouchableOpacity onPress={() => navigation.navigate("Projects")}>
@@ -74,6 +62,15 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.PRIMARY,
     borderBottomLeftRadius: 25,
     borderBottomRightRadius: 25,
+  },
+  greetingsText: {
+    color: Colors.WHITE,
+    fontFamily: "Montserrat-Medium",
+  },
+  userFullnameText: {
+    color: Colors.WHITE,
+    fontSize: 15,
+    fontFamily: "Montserrat-Medium",
   },
   profileMainContainer: {
     display: "flex",
