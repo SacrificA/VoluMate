@@ -24,7 +24,7 @@ export default function TabNavigation() {
         component={HomeNavigation}
         options={{
           tabBarLabel: ({ color }) => (
-            <Text style={{ color: color, fontSize: 12, marginTop: -10 }}>
+            <Text style={{ color: color, fontSize: 12 }}>
               Головна
             </Text>
           ),
@@ -38,7 +38,7 @@ export default function TabNavigation() {
         component={ProjectNavigation}
         options={{
           tabBarLabel: ({ color }) => (
-            <Text style={{ color: color, fontSize: 12, marginTop: -10 }}>
+            <Text style={{ color: color, fontSize: 12 }}>
               Проекти
             </Text>
           ),
@@ -56,7 +56,7 @@ export default function TabNavigation() {
         component={ProfileScreen}
         options={{
           tabBarLabel: ({ color }) => (
-            <Text style={{ color: color, fontSize: 12, marginTop: -10 }}>
+            <Text style={{ color: color, fontSize: 12 }}>
               Профіль
             </Text>
           ),

@@ -36,7 +36,7 @@ export default function App() {
       tokenCache={tokenCache}
       publishableKey="pk_test_bXVzaWNhbC1zcXVpcnJlbC0yOS5jbGVyay5hY2NvdW50cy5kZXYk"
     >
-      <View style={styles.container}>
+      <SafeAreaView style={styles.container}>
         <SignedIn>
           <NavigationContainer>
             <TabNavigation />
@@ -46,7 +46,7 @@ export default function App() {
           <Login />
         </SignedOut>
         <StatusBar style="auto" />
-      </View>
+      </SafeAreaView>
     </ClerkProvider>
   );
 }
@@ -55,6 +55,5 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    padding: 20,
   },
 });
